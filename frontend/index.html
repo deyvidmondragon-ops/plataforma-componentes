@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plataforma de Componentes</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🖥️ Componentes&amp;Más</h1>
+    <nav>
+      <button id="btn-login">Iniciar sesión</button>
+      <button id="btn-cart">Carrito (<span id="cart-count">0</span>)</button>
+      <a href="admin.html"><button>Panel admin</button></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="filtros">
+      <input id="buscar" type="text" placeholder="Buscar producto..." />
+      <select id="filtro-categoria">
+        <option value="">Todas las categorías</option>
+      </select>
+      <button id="btn-comparar">Comparar seleccionados</button>
+    </section>
+
+    <section id="catalogo" class="grid"></section>
+
+    <section id="compatibilidad">
+      <h2>Verificador de compatibilidad</h2>
+      <div class="compat-form">
+        <select id="sel-cpu"><option value="">CPU</option></select>
+        <select id="sel-placa"><option value="">Placa base</option></select>
+        <select id="sel-ram"><option value="">RAM</option></select>
+        <button id="btn-verificar">Verificar</button>
+      </div>
+      <div id="resultado-compat"></div>
+    </section>
+  </main>
+
+  <dialog id="dialog-login">
+    <h3>Iniciar sesión</h3>
+    <input id="login-email" type="email" placeholder="Email" />
+    <input id="login-password" type="password" placeholder="Contraseña" />
+    <button id="btn-submit-login">Entrar</button>
+    <button id="btn-close-login">Cerrar</button>
+  </dialog>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

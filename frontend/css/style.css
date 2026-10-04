@@ -1,0 +1,77 @@
+:root {
+  --azul: #1e3a8a;
+  --gris-claro: #f3f4f6;
+  --borde: #d1d5db;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: var(--gris-claro);
+  color: #111827;
+}
+
+header {
+  background: var(--azul);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main { padding: 2rem; max-width: 1100px; margin: 0 auto; }
+
+#filtros {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#filtros input, #filtros select {
+  padding: 0.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+.card .precio { font-weight: bold; color: var(--azul); }
+.card button { margin-top: 0.5rem; width: 100%; padding: 0.4rem; cursor: pointer; }
+
+#compatibilidad {
+  margin-top: 2.5rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+}
+
+.compat-form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+.compat-form select { padding: 0.5rem; }
+
+#resultado-compat.ok { color: #047857; }
+#resultado-compat.error { color: #b91c1c; }
